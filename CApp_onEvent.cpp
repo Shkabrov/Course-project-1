@@ -1,0 +1,184 @@
+#include"CApp.h"
+
+void CApp::onEvent(SDL_Event* e)
+{
+    CEvent::onEvent(e);
+}
+//*******************************
+void CApp::onExit()
+{
+    running = false;
+}
+//*******************************
+void CApp::onLButtonDown(int xm, int ym)
+{
+if(temp_card==0)
+    {
+        temp_card++;
+        Mix_PlayChannel(-1,snd_place,0);
+    }
+if(temp_card==3||temp_card==5||temp_card==7)
+{
+    Mix_PlayChannel(-1,snd_place,0);
+    int i1 = floor((xm - CARD_LEFT) / 63);
+    int j1 = floor((ym - CARD_TOP) / 31);
+
+    if(i1 < 0 || i1 > 2 || j1 < 0 || j1 > 1)
+        return;
+
+    if (i1 == 0)
+    {
+        fold_card();
+    }
+    if (i1 == 1)
+    {
+        check_card();
+    }
+    if (i1 == 2)
+    {
+        bet_card();
+    }
+}
+if(temp_card>10)
+    {
+        temp_card=0;
+        Mix_PlayChannel(-1,snd_place,0);
+        check_temp_card_straight=0;
+        check_temp_high_card=0;
+        moneybox=0;
+//--------------player--------------------
+        check_flush_royalP=0;
+        check_straight_flushP=0;
+        check_kareP=0;
+        check_tripleP=0;
+        check_triple2P=0;
+        check_doubleP=0;
+        check_double2P=0;
+        check_double3P=0;
+        check_straighP=0;
+        check_flushP=0;
+        check_full_houseP=0;
+        check_highP=0;
+        straight_tempP=10;
+        proverkaP=0;
+        check_fh_double_P=0;
+        check_fh_triple_P=0;
+        check_tr_triple_P=0;
+        check_db_double_P=0;
+        check_2db_double_P=0;
+        win_cardP=0;
+//--------------player(END)--------------
+//--------------computer-1---------------
+        check_flush_royalC1=0;
+        check_straight_flushC1=0;
+        check_kareC1=0;
+        check_tripleC1=0;
+        check_triple2C1=0;
+        check_doubleC1=0;
+        check_double2C1=0;
+        check_double3C1=0;
+        check_straighC1=0;
+        check_flushC1=0;
+        check_full_houseC1=0;
+        check_highC1=0;
+        straight_tempC1=10;
+        check_fh_double_C1=0;
+        check_fh_triple_C1=0;
+        check_tr_triple_C1=0;
+        check_db_double_C1=0;
+        check_2db_double_C1=0;
+        win_cardC1=0;
+//--------------computer-1(END)----------
+//--------------computer-2---------------
+        check_flush_royalC2=0;
+        check_straight_flushC2=0;
+        check_kareC2=0;
+        check_tripleC2=0;
+        check_triple2C2=0;
+        check_doubleC2=0;
+        check_double2C2=0;
+        check_double3C2=0;
+        check_straighC2=0;
+        check_flushC2=0;
+        check_full_houseC2=0;
+        check_highC2=0;
+        straight_tempC2=10;
+        check_fh_double_C2=0;
+        check_fh_triple_C2=0;
+        check_tr_triple_C2=0;
+        check_db_double_C2=0;
+        check_2db_double_C2=0;
+        win_cardC2=0;
+//--------------computer-2(END)----------
+//--------------computer-3---------------
+        check_flush_royalC3=0;
+        check_straight_flushC3=0;
+        check_kareC3=0;
+        check_tripleC3=0;
+        check_triple2C3=0;
+        check_doubleC3=0;
+        check_double2C3=0;
+        check_double3C3=0;
+        check_straighC3=0;
+        check_flushC3=0;
+        check_full_houseC3=0;
+        check_highC3=0;
+        straight_tempC3=10;
+        check_fh_double_C3=0;
+        check_fh_triple_C3=0;
+        check_tr_triple_C3=0;
+        check_db_double_C3=0;
+        check_2db_double_C3=0;
+        win_cardC3=0;
+//--------------computer-3(END)----------
+//--------------computer-4---------------
+        check_flush_royalC4=0;
+        check_straight_flushC4=0;
+        check_kareC4=0;
+        check_tripleC4=0;
+        check_triple2C4=0;
+        check_doubleC4=0;
+        check_double2C4=0;
+        check_double3C4=0;
+        check_straighC4=0;
+        check_flushC4=0;
+        check_full_houseC4=0;
+        check_highC4=0;
+        straight_tempC4=10;
+        check_fh_double_C4=0;
+        check_fh_triple_C4=0;
+        check_tr_triple_C4=0;
+        check_db_double_C4=0;
+        check_2db_double_C4=0;
+        win_cardC4=0;
+//--------------computer-4(END)----------
+//--------------computer-5---------------
+        check_flush_royalC5=0;
+        check_straight_flushC5=0;
+        check_kareC5=0;
+        check_tripleC5=0;
+        check_triple2C5=0;
+        check_doubleC5=0;
+        check_double2C5=0;
+        check_double3C5=0;
+        check_straighC5=0;
+        check_flushC5=0;
+        check_full_houseC5=0;
+        check_highC5=0;
+        straight_tempC5=10;
+        check_fh_double_C5=0;
+        check_fh_triple_C5=0;
+        check_tr_triple_C5=0;
+        check_db_double_C5=0;
+        check_2db_double_C5=0;
+        win_cardC5=0;
+//--------------computer-5(END)----------
+    }
+    if(temp_card<-15)
+    {
+        money=2000;
+        temp_card=0;
+        temp_lose=0;
+        temp_win=0;
+    }
+}

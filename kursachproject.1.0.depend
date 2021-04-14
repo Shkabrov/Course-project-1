@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1558792847 source:c:\project cb\kursachproject.1.0\capp.cpp
+	"CApp.h"
+
+1558720346 c:\project cb\kursachproject.1.0\capp.h
+	<SDL2/SDL_mixer.h>
+	<SDL2/SDL_ttf.h>
+	"CEvent.h"
+	"CSurface.h"
+	"Defines.h"
+	<math.h>
+	<stdlib.h>
+	<string>
+	<time.h>
+	<iostream>
+	<windows.h>
+
+1558577844 c:\project cb\kursachproject.1.0\cevent.h
+	<SDL2/SDL.h>
+
+1557694978 c:\project cb\kursachproject.1.0\csurface.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_ttf.h>
+
+1558694551 c:\project cb\kursachproject.1.0\defines.h
+
+1558560729 source:c:\project cb\kursachproject.1.0\capp_onevent.cpp
+	"CApp.h"
+
+1558293200 source:c:\project cb\kursachproject.1.0\capp_oninit.cpp
+	"CApp.h"
+
+1558655171 source:c:\project cb\kursachproject.1.0\capp_onloop.cpp
+	"CApp.h"
+
+1558288467 source:c:\project cb\kursachproject.1.0\capp_onquit.cpp
+	"CApp.h"
+
+1558720250 source:c:\project cb\kursachproject.1.0\capp_onrender.cpp
+	"CApp.h"
+
+1558579251 source:c:\project cb\kursachproject.1.0\cevent.cpp
+	"CEvent.h"
+
+1557696046 source:c:\project cb\kursachproject.1.0\csurface.cpp
+	"CSurface.h"
+
+1558557390 source:c:\project cb\kursachproject.1.0\main.cpp
+	"CApp.h"
+	"Baza_Dannih.h"
+	<math.h>
+	<locale.h>
+	<stdio.h>
+	<stdlib.h>
+	<iostream>
+	<conio.h>
+	<graphics.h>
+	<sstream>
+	<windows.h>
+	<winbgim.h>
+	<limits.h>
+	<SFML/Graphics.hpp>
+
+1558289400 source:c:\project cb\kursachproject.1.0\baza_dannih.cpp
+	<stdio.h>
+	<cstdlib>
+	<conio.h>
+	<locale.h>
+	<string.h>
+	<windows.h>
+
+1558792847 c:\project cb\kursachproject.1.0\baza_dannih.h
+	<stdio.h>
+	<cstdlib>
+	<conio.h>
+	<locale.h>
+	<string.h>
+	<windows.h>
+	<stdio.h>
+	<cstdlib>
+	<conio.h>
+	<locale.h>
+	<string.h>
+	<windows.h>
+
